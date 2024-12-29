@@ -1,0 +1,26 @@
+{
+  "name": "roblox-ts-template",
+  "version": "1.0.0",
+  "description": "",
+  "author": "idkncc",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "serve": "rojo serve"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "^3.0.0-types.0",
+    "@rbxts/types": "^1.0.813",
+    "rbxts-transformer-flamework": "^1.2.3",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "dependencies": {
+    "@flamework/components": "^1.2.3",
+    "@flamework/core": "^1.2.3",
+    "@flamework/networking": "^1.2.3"
+  }
+}
