@@ -21,6 +21,11 @@
   "dependencies": {
     "@flamework/components": "^1.2.3",
     "@flamework/core": "^1.2.3",
-    "@flamework/networking": "^1.2.3"
+    "@flamework/networking": "^1.2.3",
+    "@rbxts/better-react-components": "^2.9.1",
+    "@rbxts/react": "^17.2.3",
+    "@rbxts/react-roblox": "^17.2.3",
+    "@rbxts/services": "^1.5.5",
+    "@rbxts/ui-labs": "^2.3.1"
   }
 }
