@@ -1,8 +1,17 @@
 import { Networking } from "@flamework/networking";
+import { BroadcastAction } from "@rbxts/reflex";
 
-interface ClientToServerEvents { }
+interface ClientToServerEvents {
+    reflex: {
+        start(): void
+    }
+}
 
-interface ServerToClientEvents { }
+interface ServerToClientEvents {
+    reflex: {
+        dispatch(actions: BroadcastAction[]): void
+    }
+}
 
 interface ClientToServerFunctions { }
 
