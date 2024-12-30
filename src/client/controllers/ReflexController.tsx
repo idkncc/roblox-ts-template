@@ -3,6 +3,8 @@ import { createBroadcastReceiver, loggerMiddleware } from "@rbxts/reflex";
 import { Events } from "client/network";
 import { store } from "client/store";
 
+import { $NODE_ENV } from "rbxts-transform-env"
+
 @Controller()
 export class ReflexController implements OnStart {
     onStart() {
@@ -12,6 +14,7 @@ export class ReflexController implements OnStart {
 
         Events.reflex.dispatch.connect((actions) => receiver.dispatch(actions))
 
-        store.applyMiddleware(receiver.middleware, loggerMiddleware)
+        if ($NODE_ENV === "production") store.applyMiddleware(receiver.middleware)
+        else store.applyMiddleware(receiver.middleware, loggerMiddleware)
     }
 }

@@ -28,6 +28,12 @@
         "plugins": [
             {
                 "transform": "rbxts-transformer-flamework"
+            },
+            {
+                "transform": "rbxts-transform-debug"
+            },
+            {
+                "transform": "rbxts-transform-env"
             }
         ]
     }

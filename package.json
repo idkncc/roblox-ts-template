@@ -7,13 +7,16 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w",
-    "serve": "rojo serve"
+    "build:prod": "rm -r out && NODE_ENV=production rbxtsc",
+    "serve": "rojo serve",
+    "build:dev": "NODE_ENV=development rbxtsc",
+    "watch": "bun run build:dev -w"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "^3.0.0-types.0",
     "@rbxts/types": "^1.0.813",
+    "rbxts-transform-debug": "^2.2.0",
+    "rbxts-transform-env": "^3.0.0",
     "rbxts-transformer-flamework": "^1.2.3",
     "roblox-ts": "^3.0.0",
     "typescript": "5.5.3"
